@@ -13,15 +13,15 @@ enum layers { CBASE, QBASE, BUTTON, MEDIA, NAV, MOUSE, SYM, NUM, FUN };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [CBASE] = LAYOUT_split_3x5_3(
-    KC_Q,              KC_W,              KC_F,              KC_P,              KC_B,              KC_J,              KC_L,              KC_U,              KC_Y,              KC_QUOT,
+    KC_Q,              KC_W,              KC_F,              KC_P,              KC_B,              KC_J,              KC_L,              KC_U,              KC_Y,              LT(BUTTON, KC_QUOT),
     LGUI_T(KC_A),      LALT_T(KC_R),      LCTL_T(KC_S),      LSFT_T(KC_T),      KC_G,              KC_M,              LSFT_T(KC_N),      LCTL_T(KC_E),      LALT_T(KC_I),      LGUI_T(KC_O),
-    LT(BUTTON, KC_Z),  ALGR_T(KC_X),      KC_C,              KC_D,              KC_V,              KC_K,              KC_H,              KC_COMM,           ALGR_T(KC_DOT),    LT(BUTTON, KC_SLSH),
+    LT(BUTTON, KC_Z),  ALGR_T(KC_X),      KC_C,              KC_D,              KC_V,              KC_K,              KC_H,              KC_COMM,           ALGR_T(KC_DOT),    KC_SLSH,
                                           LT(MEDIA, KC_ESC), LT(NAV, KC_SPC),   LT(MOUSE, KC_TAB), LT(SYM, KC_ENT),   LT(NUM, KC_BSPC),  LT(FUN, KC_DEL)
   ),
   [QBASE] = LAYOUT_split_3x5_3(
-    KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,              KC_Y,              KC_U,              KC_I,              KC_O,              KC_P,
+    KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,              KC_Y,              KC_U,              KC_I,              KC_O,              LT(BUTTON, KC_P),
     LGUI_T(KC_A),      LALT_T(KC_S),      LCTL_T(KC_D),      LSFT_T(KC_F),      KC_G,              KC_H,              LSFT_T(KC_J),      LCTL_T(KC_K),      LALT_T(KC_L),      LGUI_T(KC_QUOT),
-    LT(BUTTON, KC_Z),  ALGR_T(KC_X),      KC_C,              KC_V,              KC_B,              KC_N,              KC_M,              KC_COMM,           ALGR_T(KC_DOT),    LT(BUTTON, KC_SLSH),
+    LT(BUTTON, KC_Z),  ALGR_T(KC_X),      KC_C,              KC_V,              KC_B,              KC_N,              KC_M,              KC_COMM,           ALGR_T(KC_DOT),    KC_SLSH,
                                           LT(MEDIA, KC_ESC), LT(NAV, KC_SPC),   LT(MOUSE, KC_TAB), LT(SYM, KC_ENT),   LT(NUM, KC_BSPC),  LT(FUN, KC_DEL)
   ),
   [NAV] = LAYOUT_split_3x5_3(
@@ -43,16 +43,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         U_NA,      U_NA,    U_NA,    KC_MSTP, KC_MPLY, KC_MUTE
   ),
   [NUM] = LAYOUT_split_3x5_3(
-    KC_BSLS, KC_7,    KC_8,    KC_9,    KC_CIRC, U_NA,    U_NA,    U_NA,    U_NA,    RESET,
-    KC_EXLM, KC_4,    KC_5,    KC_6,    KC_PLUS, U_NA,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-    KC_0,    KC_1,    KC_2,    KC_3,    KC_ASTR, U_NA,    U_NA,    U_NA,    KC_ALGR, U_NA,
-                      KC_DOT,  KC_MINS, KC_EQL,  U_NA,    U_NA,    U_NA
+    KC_GRV,  KC_7,    KC_8,    KC_9,    KC_0,    U_NA,    U_NA,    U_NA,    U_NA,    RESET,
+    KC_SCLN, KC_4,    KC_5,    KC_6,    KC_MINS, U_NA,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+    KC_BSLS, KC_1,    KC_2,    KC_3,    KC_EQL,  U_NA,    U_NA,    U_NA,    KC_ALGR, U_NA,
+                      KC_ESC,  KC_SPC,  KC_TAB,  U_NA,    U_NA,    U_NA
   ),
   [SYM] = LAYOUT_split_3x5_3(
-    KC_GRV,  KC_TILD, KC_LPRN, KC_RPRN, KC_HASH, U_NA,    U_NA,    U_NA,    U_NA,    RESET,
-    KC_ASTR, KC_AMPR, KC_LCBR, KC_RCBR, KC_PERC, U_NA,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-    KC_PIPE, KC_AT,   KC_LBRC, KC_RBRC, KC_SCLN, U_NA,    U_NA,    U_NA,    KC_ALGR, U_NA,
-                      KC_DLR,  KC_COLN, KC_UNDS, U_NA,    U_NA,    U_NA
+    KC_TILD, KC_LPRN, KC_RPRN, KC_ASTR, KC_AMPR, U_NA,    U_NA,    U_NA,    U_NA,    RESET,
+    KC_COLN, KC_LCBR, KC_RCBR, KC_EXLM, KC_EQL,  U_NA,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+    KC_MINS, KC_LBRC, KC_RBRC, KC_LT,   KC_GT,   U_NA,    U_NA,    U_NA,    KC_ALGR, U_NA,
+                      KC_ESC,  KC_SPC,  KC_TAB,  U_NA,    U_NA,    U_NA
   ),
   [FUN] = LAYOUT_split_3x5_3(
     KC_F12,  KC_F7,   KC_F8,   KC_F9,   KC_PSCR, U_NA,    U_NA,    U_NA,    U_NA,    RESET,
