@@ -4,6 +4,16 @@
 #undef TAPPING_TERM
 #define TAPPING_TERM 200
 
+#undef VENDOR_ID
+#undef PRODUCT_ID
+#undef MANUFACTURER
+#undef PRODUCT
+
+#define VENDOR_ID    0xF055
+#define PRODUCT_ID   0xCAFE
+#define MANUFACTURER dkarwowski
+#define PRODUCT      KB
+
 #define MASTER_RIGHT
 #undef MASTER_LEFT
 #undef EE_HANDS
