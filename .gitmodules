@@ -20,6 +20,4 @@
 	url = https://github.com/qmk/printf
 [submodule "layouts/community/split_3x5_3/dkarwowski"]
 	path = layouts/community/split_3x5_3/dkarwowski
-	url = https://github.com/dkarwowski/qmk_keymap.git
-[submodule "dkarwowski"]
 	url = git@github.com:dkarwowski/qmk_keymap.git
